@@ -331,6 +331,14 @@
     navbarState();
     clickMenu();
     smoothScroll();
-    portfolioMasonry();
+    // portfolioMasonry();
+    const _tid = setInterval(() => {
+      if (document.readyState !== "complete") {
+        return;
+      }
+      // document ready
+      clearInterval(_tid);
+      portfolioMasonry();
+    }, 1000);
   });
 })();
